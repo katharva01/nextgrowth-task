@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <a href="./index.html"> back to main page</a>
+    </nav>
+    <main id="main">
+      <h2>List of Random Names</h2>
+      <ul id="ul"></ul>
+      <button id="load">Load more names</button>
+    </main>
+    <script>
+      const loadBtn = document.getElementById("load");
+      let next = "https://rickandmortyapi.com/api/character";
+
+      async function addNamesToList(ul_id) {
+        const ul = document.getElementById(ul_id);
+
+        const names1 = await fetch(next);
+        // console.log(await names1.json());
+        const names2 = await names1.json();
+        const names3 = names2.results;
+        const names = names3.map((e) => e.name);
+        // console.log(names);
+        next = names2.info.next;
+        // console.log(next);
+
+        names.forEach((name) => {
+          const li = document.createElement("li");
+          li.innerText = name;
+          ul.appendChild(li);
+        });
+      }
+
+      (function () {
+        addNamesToList("ul");
+
+        const options = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 1.0,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              addNamesToList("ul");
+            }
+          });
+        }, options);
+
+        observer.observe(loadBtn);
+      })();
+
+      loadBtn.onclick = () => {
+        addNamesToList("ul");
+      };
+    </script>
+  </body>
+</html>

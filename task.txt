@@ -1,0 +1,52 @@
+# Front end engineer - 1st screening
+
+**Deadline** - Within 3 days from the date of assignment. (If you need any extension then please send a message - post which, we can extend the deadline to 4 more days - max 7 days).
+
+**Note -** Please carefully read the instructions, and test your script before submission.
+
+**Expectation from the evaluation -** We are primarily evaluating how you cover all edge cases, read
+
+instructions while writing a program.
+
+This evaluation has two sections - Compulsory - A, B. Whereas section C is optional. The submission process is given at the end of the document. In case of any questions, please feel free to reach out to us.
+
+# Section A : Making a simple website with vanilla JS
+
+- **Task 1 - BootStrap**
+- a. Use this [page](https://getbootstrap.com/docs/4.0/examples/pricing/), and create a modal - which gets called - whenever the user clicks on the pricing. The modal should contain a form - asking following details:
+- [ ]  Name
+- [ ]  Email
+- [ ]  Order Comments
+- From the bootstrap template, one should be able to click on any of the buttons of the three pricing tables, and fill in a form.
+
+- b. Use a *slider* - which should allow user to scroll between the number of users - and suppose if the number of users are 0-10, then first plan should get highlighted, 10-20, the second plan should get highlighted, and so on.
+- **Task 2 - vanilla JS**
+
+`Sign up on https://forms.maakeetoo.com`
+
+- from task 1 - the contents of form submission - should be populated there.
+- The site **core web vitals report** should be taken using lighthouse in developer tool and screenshots recorded in the video .
+- The candidate should try to optimise **Core web vitals** to meet the standard requirements for both **desktop** and **mobile**
+- 
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/17f669da-9344-4c65-98a4-3feb2893c147/aaab2e41-0150-48b4-a720-5b5dca81d99a/Untitled.png)
+
+## Section B**: Lazy Loading To Avoid Pagination (vanilla js)**
+
+To avoid pagination, Frontend devs came up with the solution of lazy loading, so when a user reaches the end of the page, more results are automatically loaded to have a good user experience.
+**Note**: **Please make sure you only use publicly available API**
+
+- Avoid using any libraries.
+- Generate any random data, after the user reaches the end of the current results.
+
+https://lh4.googleusercontent.com/uyHbNcNDtqY8ntjOH2Wqm-AV9tVY-skGi-i5GT_fdvxcrUMG4Ts78ZefLgC8KqQkUJBkQ6BwY3a1DmT-7fXtdCMQvwig7B-JK-HjnQImhkT84KIxFj7ZX4j8VLztTCljUp1uHZb7
+
+## How to Submit
+
+Fill this submission form - https://forms.gle/gVKTVBWci3L9EDnD8 We only consider the submissions through Google Form wef April 15th, 2021. (Before you fill up the form, please read the below four important pointers)
+
+1. Please create a repository in GitLab(Not Github), and add ***@NLEvaluations*** for evaluation (Only maintainer’s access), and deploy it to any server and share the link.
+2. Please include a short video/screencast - running the evaluator through both the problem statement and your solution (While we will not assess the longer videos negatively, we’d prefer the videos to be under 5 minutes - and it should be very concise and to the point). You can add the link to the Readme of the repository.
+3. Is there any way that you can automate the deployment? Wow us and get bonus points for the task.
+
+For any questions, please reach out to us at contact@nextaso.com
